@@ -1,0 +1,9 @@
+@mixin animation-mixin($name) {
+  @keyframes #{$name} {
+    100% {
+      transform: rotateZ(360deg)
+    }
+  }
+}
+
+@include animation-mixin(rotate);

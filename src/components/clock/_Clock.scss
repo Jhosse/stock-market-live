@@ -1,0 +1,72 @@
+@import "../../assets/styles/base/mixin";
+@import "../../assets/styles/base/variables";
+@import "../../assets/styles/layout/media-queries";
+
+.clock {
+  margin: 0 auto;
+  display: none;
+
+  @include media-queries(sm) {
+    display: block;
+  }
+}
+
+.clock__body {
+  background: $white url(../../assets/images/station_clock.svg) no-repeat center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: $red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    width: 5%;
+    height: 5%;
+    z-index: 10;
+  }
+}
+
+.clock__hands-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &--hours {
+    animation: rotate 43200s infinite steps(60);
+  }
+
+  &--minutes {
+    animation: rotate 3600s infinite steps(60);
+  }
+}
+
+.clock__hands {
+  position: absolute;
+  transform-origin: 50% 100%;
+  background: $black;
+
+  &--hours {
+    top: 30%;
+    left: 48.75%;
+    width: 2.5%;
+    height: 20%;
+  }
+
+  &--minutes {
+    top: 10%;
+    left: 49%;
+    width: 2%;
+    height: 40%;
+  }
+}
+
+.clock__title h3 {
+  text-align: center;
+}
