@@ -1,0 +1,18 @@
+{
+  "restartable": "rs",
+  "watch": [
+    "**/*.ts",
+    "*.ts"
+  ],
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "**/*.spec.ts"
+  ],
+  "verbose": true,
+  "exec": "ts-node src/index.ts -e ts,graphql",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js,json,ts"
+}

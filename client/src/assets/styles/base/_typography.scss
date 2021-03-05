@@ -92,14 +92,33 @@ body {
   font-family: 'ralewayRegular', 'Roboto', 'Helvetica Neue';
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: 'ralewayBlack', 'Roboto', 'Helvetica Neue';
 }
 
-.h1__bold {
+.h1__thin,
+.h2__thin,
+.h3__thin {
+  font-family: 'ralewayThin', 'Roboto', 'Helvetica Neue';
+}
+
+.h1__thin--italic,
+.h2__thin--italic
+.h3__thin--italic {
+  font-family: 'ralewayThinItalic', 'Roboto', 'Helvetica Neue';
+}
+
+
+.h1__bold,
+.h2__bold,
+.h3__bold {
   font-family: 'ralewayBold', 'Roboto', 'Helvetica Neue';
 }
 
-.h1__bold--italic {
+.h1__bold--italic,
+.h2__bold--italic,
+.h3__bold--italic {
   font-family: 'ralewayBoldItalic', 'Roboto', 'Helvetica Neue';
 }

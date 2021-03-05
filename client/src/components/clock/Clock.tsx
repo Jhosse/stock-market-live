@@ -6,7 +6,7 @@ import './_Clock.scss'
 export enum CITIES_NAMES {
   NEW_YORK = 'New York',
   LONDON = 'London',
-  TOKYO = 'Tokyo'
+  HONG_KONG = 'Hong Kong'
 }
 
 interface ClockProps {
@@ -16,10 +16,20 @@ interface ClockProps {
 }
 
 const CITY_TIMEZONE_MAP = new Map([
-  [CITIES_NAMES.NEW_YORK, 'America/New_York'],
-  [CITIES_NAMES.LONDON, 'GMT+0'],
-  [CITIES_NAMES.TOKYO, 'Asia/Tokyo']
+  [CITIES_NAMES.NEW_YORK, { timeZone: 'America/New_York', marketOpen: '9' }],
+  [CITIES_NAMES.LONDON, { timeZone: 'GMT+0', marketOpen: '9' }],
+  [CITIES_NAMES.HONG_KONG, { timeZone: 'Asia/Hong_Kong', marketOpen: '9' }]
 ]);
+
+/**
+ * TODO:
+ * Build a countdown clock underneath the city name.
+ * or "open" in green.
+ * london: M-F, 8:00am - 4:30pm (GMT)
+ * New York: M-F, 9:30am - 4:00pm (EST)
+ * Hong Kong: M-F, 9:30am - 12:00pm, 1:00pm - 4:00pm (HKT)
+ * https://www.tradinghours.com/markets
+ */
 
 export const Clock: FunctionComponent<ClockProps> = ({
   width,
@@ -32,8 +42,8 @@ export const Clock: FunctionComponent<ClockProps> = ({
     height: `${height}em`
   }
 
-  const hours = Number(moment().tz(`${CITY_TIMEZONE_MAP.get(cityName)}`).format('h'))
-  const minutes = Number(moment().tz(`${CITY_TIMEZONE_MAP.get(cityName)}`).format('mm'))
+  const hours = Number(moment().tz(`${CITY_TIMEZONE_MAP.get(cityName)?.timeZone}`).format('h'))
+  const minutes = Number(moment().tz(`${CITY_TIMEZONE_MAP.get(cityName)?.timeZone}`).format('mm'))
 
   const handsPositionStyles = {
     hours: {
@@ -55,7 +65,7 @@ export const Clock: FunctionComponent<ClockProps> = ({
         </div>
       </div>
       <div className={'clock__title'}>
-        <h3>{cityName}</h3>
+        <h3 className={'h3__thin'}>{cityName}</h3>
       </div>
     </div>
   )

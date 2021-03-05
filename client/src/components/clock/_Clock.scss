@@ -1,6 +1,7 @@
 @import "../../assets/styles/base/mixin";
 @import "../../assets/styles/base/variables";
 @import "../../assets/styles/layout/media-queries";
+@import "../../assets/styles/base/typography";
 
 .clock {
   margin: 0 auto;
@@ -14,8 +15,10 @@
 .clock__body {
   background: $white url(../../assets/images/station_clock.svg) no-repeat center;
   position: relative;
-  width: 100%;
-  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 80%;
 
   &::after{
     content: "";
@@ -69,4 +72,6 @@
 
 .clock__title h3 {
   text-align: center;
+  font-size: .8rem;
+  text-transform: uppercase;
 }
