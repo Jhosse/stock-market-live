@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Yahoo Finance API summaryAndSpark 1`] = `
+Object {
+  "summaryAndSpark": Object {
+    "marketSummaryAndSparkResponse": Object {
+      "result": Array [
+        Object {
+          "symbol": "^FTSE",
+        },
+        Object {
+          "symbol": "^FTMC",
+        },
+        Object {
+          "symbol": "^FTAI",
+        },
+        Object {
+          "symbol": "GBPEUR=X",
+        },
+        Object {
+          "symbol": "GBPUSD=X",
+        },
+        Object {
+          "symbol": "BTC-GBP",
+        },
+        Object {
+          "symbol": "^CMC200",
+        },
+        Object {
+          "symbol": "^GSPC",
+        },
+        Object {
+          "symbol": "^DJI",
+        },
+        Object {
+          "symbol": "CL=F",
+        },
+        Object {
+          "symbol": "GC=F",
+        },
+        Object {
+          "symbol": "^N225",
+        },
+        Object {
+          "symbol": "^HSI",
+        },
+        Object {
+          "symbol": "^GDAXI",
+        },
+        Object {
+          "symbol": "^FCHI",
+        },
+      ],
+    },
+  },
+}
+`;

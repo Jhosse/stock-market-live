@@ -2,7 +2,8 @@ import { RESTDataSource, RequestOptions } from 'apollo-datasource-rest'
 import { yahooFinanceToken } from '../env'
 import { SummaryAndSpark } from '../types/graphql'
 
-const URL = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-summary"
+const URL = 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-summary'
+const HOST = 'apidojo-yahoo-finance-v1.p.rapidapi.com'
 
 export class YahooFinanceAPI extends RESTDataSource {
   constructor() {
@@ -12,7 +13,7 @@ export class YahooFinanceAPI extends RESTDataSource {
 
   willSendRequest(request: RequestOptions) {
     request.headers.set('x-rapidapi-key', yahooFinanceToken)
-    request.headers.set('x-rapidapi-host', 'apidojo-yahoo-finance-v1.p.rapidapi.com')
+    request.headers.set('x-rapidapi-host', HOST)
     request.headers.set('useQueryString', 'true')
   }
 
