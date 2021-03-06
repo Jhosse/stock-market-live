@@ -1,0 +1,57 @@
+type RegularMarketPreviousClose {
+  raw: Float
+  fmt: String
+}
+
+type Spark {
+  symbol: String
+  end: Int
+  start: Int
+  previousClose: Float
+  chartPreviousClose: Float
+  dataGranularity: Int
+  close: [Float]
+  timestamp: [Int]
+}
+
+type RegularMarketTime {
+  raw: Int
+  fmt: String
+}
+
+type Result {
+  exchangeTimezoneName: String
+  fullExchangeName: String
+  symbol: String
+  gmtOffSetMilliseconds: Int
+  firstTradeDateMilliseconds: Int
+  exchangeDataDelayedBy: Int
+  language: String
+  exchangeTimezoneShortName: String
+  quoteType: String
+  marketState: String
+  market: String
+  priceHint: Int
+  tradeable: Boolean
+  exchange: String
+  sourceInterval: Int
+  shortName: String
+  region: String
+  triggerable: Boolean
+  regularMarketPreviousClose: RegularMarketPreviousClose
+  spark: Spark
+  regularMarketTime: RegularMarketTime
+}
+
+type MarketSummaryAndSparkResponse {
+  error: String
+  result: [Result]
+}
+
+type SummaryAndSpark {
+  marketSummaryAndSparkResponse: MarketSummaryAndSparkResponse
+}
+
+type Query {
+  summaryAndSpark(region: String): SummaryAndSpark
+}

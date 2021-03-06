@@ -1,0 +1,14 @@
+schema: ./schema/typeDefs.graphql
+overwrite: true
+generates:
+  ./types/graphql.d.ts:
+    plugins:
+      - typescript
+      - typescript-resolvers
+
+  # config:
+  #   useIndexSignature: true
+  #   contextType: ../context#MyContext
+  #   mappers:
+  #     User: ./customTypes#User
+  #     AuthenticatedUser: ./customTypes#AuthenticatedUser

@@ -10,7 +10,7 @@
     "**/*.spec.ts"
   ],
   "verbose": true,
-  "exec": "ts-node src/index.ts -e ts,graphql",
+  "exec": "ts-node index.ts -e ts,graphql",
   "env": {
     "NODE_ENV": "development"
   },
