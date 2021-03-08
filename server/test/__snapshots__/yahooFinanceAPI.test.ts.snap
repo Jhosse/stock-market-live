@@ -1,54 +1,206 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Yahoo Finance API summaryAndSpark 1`] = `
+exports[`Yahoo Finance API should fetch movers 1`] = `
+Object {
+  "movers": Object {
+    "finance": Object {
+      "result": Array [
+        Object {
+          "description": "Stocks ordered in descending order by price percent change greater than 3% with respect to the previous close",
+          "id": "ec5bebb9-b7b2-4474-9e5c-3e258b61cbe6",
+          "quotes": Array [
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "BAYP",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "HKIB",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "PRPL",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "VIR",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "HP",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "NOV",
+            },
+          ],
+          "title": "Day Gainers - US",
+        },
+        Object {
+          "description": "Stocks ordered in ascending order by price percent change with respect to the previous close",
+          "id": "8ecefa87-a8b0-434a-9b39-e061a0baef9b",
+          "quotes": Array [
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "MDLA",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "ALXO",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "SEER",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "CERT",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "LNSTY",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "NCLH",
+            },
+          ],
+          "title": "Day Losers - US",
+        },
+        Object {
+          "description": "Stocks ordered in descending order by intraday trade volume",
+          "id": "437465ef-980e-4d8c-a860-de7cbfbab373",
+          "quotes": Array [
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "NIO",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "PLTR",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "AAPL",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "BCS",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "GE",
+            },
+            Object {
+              "market": "us_market",
+              "marketState": "CLOSED",
+              "symbol": "NCLH",
+            },
+          ],
+          "title": "Most Actives - US",
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`Yahoo Finance API should fetch summaryAndSpark 1`] = `
 Object {
   "summaryAndSpark": Object {
     "marketSummaryAndSparkResponse": Object {
       "result": Array [
         Object {
-          "symbol": "^FTSE",
-        },
-        Object {
-          "symbol": "^FTMC",
-        },
-        Object {
-          "symbol": "^FTAI",
-        },
-        Object {
-          "symbol": "GBPEUR=X",
-        },
-        Object {
-          "symbol": "GBPUSD=X",
-        },
-        Object {
-          "symbol": "BTC-GBP",
-        },
-        Object {
-          "symbol": "^CMC200",
-        },
-        Object {
+          "fullExchangeName": "SNP",
+          "market": "us_market",
           "symbol": "^GSPC",
         },
         Object {
+          "fullExchangeName": "DJI",
+          "market": "us_market",
           "symbol": "^DJI",
         },
         Object {
+          "fullExchangeName": "Nasdaq GIDS",
+          "market": "us_market",
+          "symbol": "^IXIC",
+        },
+        Object {
+          "fullExchangeName": "Chicago Options",
+          "market": "us_market",
+          "symbol": "^RUT",
+        },
+        Object {
+          "fullExchangeName": "NY Mercantile",
+          "market": "us24_market",
           "symbol": "CL=F",
         },
         Object {
+          "fullExchangeName": "COMEX",
+          "market": "us24_market",
           "symbol": "GC=F",
         },
         Object {
+          "fullExchangeName": "COMEX",
+          "market": "us24_market",
+          "symbol": "SI=F",
+        },
+        Object {
+          "fullExchangeName": "CCY",
+          "market": "ccy_market",
+          "symbol": "EURUSD=X",
+        },
+        Object {
+          "fullExchangeName": "NYBOT",
+          "market": "us24_market",
+          "symbol": "^TNX",
+        },
+        Object {
+          "fullExchangeName": "CCY",
+          "market": "ccy_market",
+          "symbol": "GBPUSD=X",
+        },
+        Object {
+          "fullExchangeName": "CCY",
+          "market": "ccy_market",
+          "symbol": "JPY=X",
+        },
+        Object {
+          "fullExchangeName": "CCC",
+          "market": "ccc_market",
+          "symbol": "BTC-USD",
+        },
+        Object {
+          "fullExchangeName": "Nasdaq GIDS",
+          "market": "us_market",
+          "symbol": "^CMC200",
+        },
+        Object {
+          "fullExchangeName": "FTSE Index",
+          "market": "gb_market",
+          "symbol": "^FTSE",
+        },
+        Object {
+          "fullExchangeName": "Osaka",
+          "market": "jp_market",
           "symbol": "^N225",
-        },
-        Object {
-          "symbol": "^HSI",
-        },
-        Object {
-          "symbol": "^GDAXI",
-        },
-        Object {
-          "symbol": "^FCHI",
         },
       ],
     },

@@ -1,4 +1,6 @@
-export default {
+import { SummaryAndSpark } from "../../../types/graphql";
+
+export const mockSummaryAndSparkUS: SummaryAndSpark = {
   marketSummaryAndSparkResponse: {
     result: [
       {

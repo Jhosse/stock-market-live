@@ -1,8 +1,8 @@
 import { RESTDataSource, RequestOptions } from 'apollo-datasource-rest'
 import { yahooFinanceToken } from '../env'
-import { SummaryAndSpark } from '../types/graphql'
+import { SummaryAndSpark, Movers, Region } from '../types/graphql'
 
-const URL = 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-summary'
+const URL = 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2'
 const HOST = 'apidojo-yahoo-finance-v1.p.rapidapi.com'
 
 export class YahooFinanceAPI extends RESTDataSource {
@@ -17,8 +17,22 @@ export class YahooFinanceAPI extends RESTDataSource {
     request.headers.set('useQueryString', 'true')
   }
 
-  async getSummaryAndSpark(region: String = 'US'): Promise<SummaryAndSpark> {
-    return this.get(`?region=${region}`)
+  /**
+   * Get live summary information of market by region
+   * @param region
+   * @returns Promise<SummaryAndSpark>
+   */
+  async getSummaryAndSpark(region: Region): Promise<SummaryAndSpark> {
+    return this.get(`get-summary?region=${region}`)
+  }
+
+  /**
+   * The live day gainers / losers / actives in specific region
+   * @param region (US | GB | HK)
+   * @returns Promise<Movers>
+   */
+  async getMovers(region: Region): Promise<Movers> {
+    return this.get(`get-movers?region=${region}`)
   }
 }
 
