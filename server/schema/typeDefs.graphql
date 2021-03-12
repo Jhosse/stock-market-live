@@ -1,105 +1,105 @@
 type Quotes {
-  language: String
-  region: String
-  quoteType: String
+  language: String!
+  region: String!
+  quoteType: String!
   quoteSourceName: String
-  triggerable: Boolean
+  triggerable: Boolean!
   firstTradeDateMilliseconds: Int
-  priceHint: Int
-  exchange: String
-  market: String
-  fullExchangeName: String
-  marketState: String
-  sourceInterval: Int
-  exchangeDataDelayedBy: Int
-  exchangeTimezoneName: String
-  exchangeTimezoneShortName: String
-  gmtOffSetMilliseconds: Int
-  esgPopulated: Boolean
-  tradeable: Boolean
-  symbol: String
+  priceHint: Int!
+  exchange: String!
+  market: String!
+  fullExchangeName: String!
+  marketState: String!
+  sourceInterval: Int!
+  exchangeDataDelayedBy: Int!
+  exchangeTimezoneName: String!
+  exchangeTimezoneShortName: String!
+  gmtOffSetMilliseconds: Int!
+  esgPopulated: Boolean!
+  tradeable: Boolean!
+  symbol: String!
 }
 
 type Criteria {
-  field: String
-  labelsSelected: [Int]
-  values: [Int]
-  operators: [String]
+  field: String!
+  labelsSelected: [Int]!
+  values: [Int]!
+  operators: [String]!
 }
 
 type CriteriaMeta {
-  size: Int
-  offset: Int
-  sortField: String
-  sortType: String
-  quoteType: String
-  topOperator: String
-  criteria: [Criteria]
+  size: Int!
+  offset: Int!
+  sortField: String!
+  sortType: String!
+  quoteType: String!
+  topOperator: String!
+  criteria: [Criteria]!
 }
 
 type MoversResult {
-  id: String
-  title: String
-  description: String
-  canonicalName: String
-  rawCriteria: String
-  start: Int
-  count: Int
-  total: Int
-  predefinedScr: Boolean
-  versionId: Int
-  quotes: [Quotes]
-  criteriaMeta: CriteriaMeta
+  id: String!
+  title: String!
+  description: String!
+  canonicalName: String!
+  rawCriteria: String!
+  start: Int!
+  count: Int!
+  total: Int!
+  predefinedScr: Boolean!
+  versionId: Int!
+  quotes: [Quotes]!
+  criteriaMeta: CriteriaMeta!
 }
 
 type Finance {
   error: String
-  result: [MoversResult]
+  result: [MoversResult]!
 }
 
 type RegularMarketPreviousClose {
-  raw: Float
-  fmt: String
+  raw: Float!
+  fmt: String!
 }
 
 type Spark {
-  symbol: String
-  end: Int
-  start: Int
-  previousClose: Float
-  chartPreviousClose: Float
-  dataGranularity: Int
-  close: [Float]
-  timestamp: [Int]
+  symbol: String!
+  end: Int!
+  start: Int!
+  previousClose: Float!
+  chartPreviousClose: Float!
+  dataGranularity: Int!
+  close: [Float]!
+  timestamp: [Int]!
 }
 
 type RegularMarketTime {
-  raw: Int
-  fmt: String
+  raw: Int!
+  fmt: String!
 }
 
 type SummaryAndSparkResult {
-  exchangeTimezoneName: String
-  fullExchangeName: String
-  symbol: String
-  gmtOffSetMilliseconds: Int
+  exchangeTimezoneName: String!
+  fullExchangeName: String!
+  symbol: String!
+  gmtOffSetMilliseconds: Int!
   firstTradeDateMilliseconds: Int
-  exchangeDataDelayedBy: Int
-  language: String
-  exchangeTimezoneShortName: String
-  quoteType: String
-  marketState: String
-  market: String
-  priceHint: Int
-  tradeable: Boolean
-  exchange: String
-  sourceInterval: Int
+  exchangeDataDelayedBy: Int!
+  language: String!
+  exchangeTimezoneShortName: String!
+  quoteType: String!
+  marketState: String!
+  market: String!
+  priceHint: Int!
+  tradeable: Boolean!
+  exchange: String!
+  sourceInterval: Int!
   shortName: String
-  region: String
-  triggerable: Boolean
-  regularMarketPreviousClose: RegularMarketPreviousClose
-  spark: Spark
-  regularMarketTime: RegularMarketTime
+  region: String!
+  triggerable: Boolean!
+  regularMarketPreviousClose: RegularMarketPreviousClose!
+  spark: Spark!
+  regularMarketTime: RegularMarketTime!
 }
 
 type MarketSummaryAndSparkResponse {
@@ -113,19 +113,16 @@ enum Region {
   HK
 }
 
-type TestOne {
-  name: String
-}
-
 type Movers {
-  finance: Finance
+  finance: Finance!
 }
 
 type SummaryAndSpark {
-  marketSummaryAndSparkResponse: MarketSummaryAndSparkResponse
+  marketSummaryAndSparkResponse: MarketSummaryAndSparkResponse!
 }
 
 type Query {
-  summaryAndSpark(region: Region!): SummaryAndSpark
-  movers(region: Region!): Movers
+  summaryAndSpark(region: Region!): SummaryAndSpark!
+  movers(region: Region!): Movers!
+  allMovers(regions: [Region]!): [Movers]!
 }

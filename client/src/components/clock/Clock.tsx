@@ -56,6 +56,9 @@ export const Clock: FunctionComponent<ClockProps> = ({
 
   return (
     <div style={wrapperStyles} className={'clock'}>
+      <div className={'clock__title'}>
+        <h3 className={'h3__thin'}>{cityName}</h3>
+      </div>
       <div className={'clock__body'}>
         <div className={'clock__hands-container clock__hands-container--hours'}>
           <div style={handsPositionStyles.hours} className={'clock__hands clock__hands--hours'}></div>
@@ -63,9 +66,6 @@ export const Clock: FunctionComponent<ClockProps> = ({
         <div className={'clock__hands-container clock__hands-container--minutes'}>
           <div style={handsPositionStyles.minutes} className={'clock__hands clock__hands--minutes'}></div>
         </div>
-      </div>
-      <div className={'clock__title'}>
-        <h3 className={'h3__thin'}>{cityName}</h3>
       </div>
     </div>
   )

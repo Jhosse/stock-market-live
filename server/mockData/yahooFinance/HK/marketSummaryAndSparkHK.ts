@@ -4303,6 +4303,6 @@ export const mockSummaryAndSparkHK: SummaryAndSpark = {
           raw: 1024.2072, fmt: "1,024.21"
         }, triggerable: false
       }
-    ], error: null
+    ], error: undefined
   }
 }

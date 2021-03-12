@@ -1,120 +1,478 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Yahoo Finance API should fetch all movers 1`] = `
+Object {
+  "allMovers": Array [
+    Object {
+      "finance": Object {
+        "result": Array [
+          Object {
+            "description": "Stocks ordered in descending order by price percent change greater than 3% with respect to the previous close",
+            "id": "ec5bebb9-b7b2-4474-9e5c-3e258b61cbe6",
+            "quotes": Array [
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "BAYP",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "HKIB",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "PRPL",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "VIR",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "HP",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "NOV",
+              },
+            ],
+            "title": "Day Gainers - US",
+          },
+          Object {
+            "description": "Stocks ordered in ascending order by price percent change with respect to the previous close",
+            "id": "8ecefa87-a8b0-434a-9b39-e061a0baef9b",
+            "quotes": Array [
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "MDLA",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "ALXO",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "SEER",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "CERT",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "LNSTY",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "NCLH",
+              },
+            ],
+            "title": "Day Losers - US",
+          },
+          Object {
+            "description": "Stocks ordered in descending order by intraday trade volume",
+            "id": "437465ef-980e-4d8c-a860-de7cbfbab373",
+            "quotes": Array [
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "NIO",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "PLTR",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "AAPL",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "BCS",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "GE",
+              },
+              Object {
+                "market": "us_market",
+                "marketState": "CLOSED",
+                "symbol": "NCLH",
+              },
+            ],
+            "title": "Most Actives - US",
+          },
+        ],
+      },
+    },
+    Object {
+      "finance": Object {
+        "result": Array [
+          Object {
+            "description": "Stocks ordered in descending order by price percent change greater than 2.5% with respect to the previous close for United Kingdom",
+            "id": "97b9075b-c5ab-4c85-bfd3-9694a061e5d2",
+            "quotes": Array [
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "0E6H.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "0YZ2.IL",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "0LCZ.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "7DIG.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "ARDN.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "EQT.L",
+              },
+            ],
+            "title": "Day Gainers - United Kingdom",
+          },
+          Object {
+            "description": "Stocks ordered in ascending order by price percent change with respect to the previous close for United Kingdom",
+            "id": "01a3b7ec-c577-401f-8b19-57d6bbf5ce8e",
+            "quotes": Array [
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "UHS.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "0RA9.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "ORR.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "0RUK.IL",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "CLP.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "MACP.L",
+              },
+            ],
+            "title": "Day Losers - United Kingdom",
+          },
+          Object {
+            "description": "Stocks ordered in descending order by intraday trade volume for United Kingdom",
+            "id": "433c5af8-f58f-4d92-8338-7d928f558a0d",
+            "quotes": Array [
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "PREM.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "SYME.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "ORR.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "ICON.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "CAT.L",
+              },
+              Object {
+                "market": "gb_market",
+                "marketState": "REGULAR",
+                "symbol": "EQT.L",
+              },
+            ],
+            "title": "Most Actives - United Kingdom",
+          },
+        ],
+      },
+    },
+    Object {
+      "finance": Object {
+        "result": Array [
+          Object {
+            "description": "Stocks ordered in descending order by price percent change greater than 2.5% with respect to the previous close for Hong Kong",
+            "id": "93505957-f2ce-4666-8f7c-91275819b5f6",
+            "quotes": Array [
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "1555.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "3860.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "3893.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "1168.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "8050.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "1592.HK",
+              },
+            ],
+            "title": "Day Gainers - Hong Kong",
+          },
+          Object {
+            "description": "Stocks ordered in ascending order by price percent change with respect to the previous close for Hong Kong",
+            "id": "5d940688-4853-49bd-a3b3-849ca743ad8c",
+            "quotes": Array [
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "2995.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "8089.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "0263.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "3886.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "1183.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "0068.HK",
+              },
+            ],
+            "title": "Day Losers - Hong Kong",
+          },
+          Object {
+            "description": "Stocks ordered in descending order by intraday trade volume for Hong Kong",
+            "id": "9dbdb8ef-d0c2-446f-baab-be6997a20be8",
+            "quotes": Array [
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "3800.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "0788.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "0273.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "0493.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "3988.HK",
+              },
+              Object {
+                "market": "hk_market",
+                "marketState": "PREPRE",
+                "symbol": "1398.HK",
+              },
+            ],
+            "title": "Most Actives - Hong Kong",
+          },
+        ],
+      },
+    },
+  ],
+}
+`;
+
 exports[`Yahoo Finance API should fetch movers 1`] = `
 Object {
   "movers": Object {
     "finance": Object {
       "result": Array [
         Object {
-          "description": "Stocks ordered in descending order by price percent change greater than 3% with respect to the previous close",
-          "id": "ec5bebb9-b7b2-4474-9e5c-3e258b61cbe6",
+          "description": "Stocks ordered in descending order by price percent change greater than 2.5% with respect to the previous close for United Kingdom",
+          "id": "97b9075b-c5ab-4c85-bfd3-9694a061e5d2",
           "quotes": Array [
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "BAYP",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "0E6H.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "HKIB",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "0YZ2.IL",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "PRPL",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "0LCZ.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "VIR",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "7DIG.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "HP",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "ARDN.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "NOV",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "EQT.L",
             },
           ],
-          "title": "Day Gainers - US",
+          "title": "Day Gainers - United Kingdom",
         },
         Object {
-          "description": "Stocks ordered in ascending order by price percent change with respect to the previous close",
-          "id": "8ecefa87-a8b0-434a-9b39-e061a0baef9b",
+          "description": "Stocks ordered in ascending order by price percent change with respect to the previous close for United Kingdom",
+          "id": "01a3b7ec-c577-401f-8b19-57d6bbf5ce8e",
           "quotes": Array [
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "MDLA",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "UHS.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "ALXO",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "0RA9.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "SEER",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "ORR.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "CERT",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "0RUK.IL",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "LNSTY",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "CLP.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "NCLH",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "MACP.L",
             },
           ],
-          "title": "Day Losers - US",
+          "title": "Day Losers - United Kingdom",
         },
         Object {
-          "description": "Stocks ordered in descending order by intraday trade volume",
-          "id": "437465ef-980e-4d8c-a860-de7cbfbab373",
+          "description": "Stocks ordered in descending order by intraday trade volume for United Kingdom",
+          "id": "433c5af8-f58f-4d92-8338-7d928f558a0d",
           "quotes": Array [
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "NIO",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "PREM.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "PLTR",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "SYME.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "AAPL",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "ORR.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "BCS",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "ICON.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "GE",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "CAT.L",
             },
             Object {
-              "market": "us_market",
-              "marketState": "CLOSED",
-              "symbol": "NCLH",
+              "market": "gb_market",
+              "marketState": "REGULAR",
+              "symbol": "EQT.L",
             },
           ],
-          "title": "Most Actives - US",
+          "title": "Most Actives - United Kingdom",
         },
       ],
     },
@@ -128,6 +486,41 @@ Object {
     "marketSummaryAndSparkResponse": Object {
       "result": Array [
         Object {
+          "fullExchangeName": "FTSE Index",
+          "market": "gb_market",
+          "symbol": "^FTSE",
+        },
+        Object {
+          "fullExchangeName": "FTSE Index",
+          "market": "gb_market",
+          "symbol": "^FTMC",
+        },
+        Object {
+          "fullExchangeName": "FTSE Index",
+          "market": "gb_market",
+          "symbol": "^FTAI",
+        },
+        Object {
+          "fullExchangeName": "CCY",
+          "market": "ccy_market",
+          "symbol": "GBPEUR=X",
+        },
+        Object {
+          "fullExchangeName": "CCY",
+          "market": "ccy_market",
+          "symbol": "GBPUSD=X",
+        },
+        Object {
+          "fullExchangeName": "CCC",
+          "market": "ccc_market",
+          "symbol": "BTC-GBP",
+        },
+        Object {
+          "fullExchangeName": "Nasdaq GIDS",
+          "market": "us_market",
+          "symbol": "^CMC200",
+        },
+        Object {
           "fullExchangeName": "SNP",
           "market": "us_market",
           "symbol": "^GSPC",
@@ -136,16 +529,6 @@ Object {
           "fullExchangeName": "DJI",
           "market": "us_market",
           "symbol": "^DJI",
-        },
-        Object {
-          "fullExchangeName": "Nasdaq GIDS",
-          "market": "us_market",
-          "symbol": "^IXIC",
-        },
-        Object {
-          "fullExchangeName": "Chicago Options",
-          "market": "us_market",
-          "symbol": "^RUT",
         },
         Object {
           "fullExchangeName": "NY Mercantile",
@@ -158,49 +541,24 @@ Object {
           "symbol": "GC=F",
         },
         Object {
-          "fullExchangeName": "COMEX",
-          "market": "us24_market",
-          "symbol": "SI=F",
-        },
-        Object {
-          "fullExchangeName": "CCY",
-          "market": "ccy_market",
-          "symbol": "EURUSD=X",
-        },
-        Object {
-          "fullExchangeName": "NYBOT",
-          "market": "us24_market",
-          "symbol": "^TNX",
-        },
-        Object {
-          "fullExchangeName": "CCY",
-          "market": "ccy_market",
-          "symbol": "GBPUSD=X",
-        },
-        Object {
-          "fullExchangeName": "CCY",
-          "market": "ccy_market",
-          "symbol": "JPY=X",
-        },
-        Object {
-          "fullExchangeName": "CCC",
-          "market": "ccc_market",
-          "symbol": "BTC-USD",
-        },
-        Object {
-          "fullExchangeName": "Nasdaq GIDS",
-          "market": "us_market",
-          "symbol": "^CMC200",
-        },
-        Object {
-          "fullExchangeName": "FTSE Index",
-          "market": "gb_market",
-          "symbol": "^FTSE",
-        },
-        Object {
           "fullExchangeName": "Osaka",
           "market": "jp_market",
           "symbol": "^N225",
+        },
+        Object {
+          "fullExchangeName": "HKSE",
+          "market": "hk_market",
+          "symbol": "^HSI",
+        },
+        Object {
+          "fullExchangeName": "XETRA",
+          "market": "de_market",
+          "symbol": "^GDAXI",
+        },
+        Object {
+          "fullExchangeName": "Paris",
+          "market": "fr_market",
+          "symbol": "^FCHI",
         },
       ],
     },

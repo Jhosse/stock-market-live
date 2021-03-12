@@ -95,7 +95,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'ralewayBlack', 'Roboto', 'Helvetica Neue';
+  font-family: 'ralewayBold', 'Roboto', 'Helvetica Neue';
 }
 
 .h1__thin,
@@ -111,10 +111,10 @@ h3 {
 }
 
 
-.h1__bold,
-.h2__bold,
-.h3__bold {
-  font-family: 'ralewayBold', 'Roboto', 'Helvetica Neue';
+.h1__black,
+.h2__black,
+.h3__black {
+  font-family: 'ralewayBlack', 'Roboto', 'Helvetica Neue';
 }
 
 .h1__bold--italic,

@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
-export type Maybe<T> = T | null;
+export type Maybe<T> = T;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
@@ -15,115 +15,115 @@ export type Scalars = {
 
 export type Quotes = {
   __typename?: 'Quotes';
-  language?: Maybe<Scalars['String']>;
-  region?: Maybe<Scalars['String']>;
-  quoteType?: Maybe<Scalars['String']>;
+  language: Scalars['String'];
+  region: Scalars['String'];
+  quoteType: Scalars['String'];
   quoteSourceName?: Maybe<Scalars['String']>;
-  triggerable?: Maybe<Scalars['Boolean']>;
+  triggerable: Scalars['Boolean'];
   firstTradeDateMilliseconds?: Maybe<Scalars['Int']>;
-  priceHint?: Maybe<Scalars['Int']>;
-  exchange?: Maybe<Scalars['String']>;
-  market?: Maybe<Scalars['String']>;
-  fullExchangeName?: Maybe<Scalars['String']>;
-  marketState?: Maybe<Scalars['String']>;
-  sourceInterval?: Maybe<Scalars['Int']>;
-  exchangeDataDelayedBy?: Maybe<Scalars['Int']>;
-  exchangeTimezoneName?: Maybe<Scalars['String']>;
-  exchangeTimezoneShortName?: Maybe<Scalars['String']>;
-  gmtOffSetMilliseconds?: Maybe<Scalars['Int']>;
-  esgPopulated?: Maybe<Scalars['Boolean']>;
-  tradeable?: Maybe<Scalars['Boolean']>;
-  symbol?: Maybe<Scalars['String']>;
+  priceHint: Scalars['Int'];
+  exchange: Scalars['String'];
+  market: Scalars['String'];
+  fullExchangeName: Scalars['String'];
+  marketState: Scalars['String'];
+  sourceInterval: Scalars['Int'];
+  exchangeDataDelayedBy: Scalars['Int'];
+  exchangeTimezoneName: Scalars['String'];
+  exchangeTimezoneShortName: Scalars['String'];
+  gmtOffSetMilliseconds: Scalars['Int'];
+  esgPopulated: Scalars['Boolean'];
+  tradeable: Scalars['Boolean'];
+  symbol: Scalars['String'];
 };
 
 export type Criteria = {
   __typename?: 'Criteria';
-  field?: Maybe<Scalars['String']>;
-  labelsSelected?: Maybe<Array<Maybe<Scalars['Int']>>>;
-  values?: Maybe<Array<Maybe<Scalars['Int']>>>;
-  operators?: Maybe<Array<Maybe<Scalars['String']>>>;
+  field: Scalars['String'];
+  labelsSelected: Array<Maybe<Scalars['Int']>>;
+  values: Array<Maybe<Scalars['Int']>>;
+  operators: Array<Maybe<Scalars['String']>>;
 };
 
 export type CriteriaMeta = {
   __typename?: 'CriteriaMeta';
-  size?: Maybe<Scalars['Int']>;
-  offset?: Maybe<Scalars['Int']>;
-  sortField?: Maybe<Scalars['String']>;
-  sortType?: Maybe<Scalars['String']>;
-  quoteType?: Maybe<Scalars['String']>;
-  topOperator?: Maybe<Scalars['String']>;
-  criteria?: Maybe<Array<Maybe<Criteria>>>;
+  size: Scalars['Int'];
+  offset: Scalars['Int'];
+  sortField: Scalars['String'];
+  sortType: Scalars['String'];
+  quoteType: Scalars['String'];
+  topOperator: Scalars['String'];
+  criteria: Array<Maybe<Criteria>>;
 };
 
 export type MoversResult = {
   __typename?: 'MoversResult';
-  id?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
-  description?: Maybe<Scalars['String']>;
-  canonicalName?: Maybe<Scalars['String']>;
-  rawCriteria?: Maybe<Scalars['String']>;
-  start?: Maybe<Scalars['Int']>;
-  count?: Maybe<Scalars['Int']>;
-  total?: Maybe<Scalars['Int']>;
-  predefinedScr?: Maybe<Scalars['Boolean']>;
-  versionId?: Maybe<Scalars['Int']>;
-  quotes?: Maybe<Array<Maybe<Quotes>>>;
-  criteriaMeta?: Maybe<CriteriaMeta>;
+  id: Scalars['String'];
+  title: Scalars['String'];
+  description: Scalars['String'];
+  canonicalName: Scalars['String'];
+  rawCriteria: Scalars['String'];
+  start: Scalars['Int'];
+  count: Scalars['Int'];
+  total: Scalars['Int'];
+  predefinedScr: Scalars['Boolean'];
+  versionId: Scalars['Int'];
+  quotes: Array<Maybe<Quotes>>;
+  criteriaMeta: CriteriaMeta;
 };
 
 export type Finance = {
   __typename?: 'Finance';
   error?: Maybe<Scalars['String']>;
-  result?: Maybe<Array<Maybe<MoversResult>>>;
+  result: Array<Maybe<MoversResult>>;
 };
 
 export type RegularMarketPreviousClose = {
   __typename?: 'RegularMarketPreviousClose';
-  raw?: Maybe<Scalars['Float']>;
-  fmt?: Maybe<Scalars['String']>;
+  raw: Scalars['Float'];
+  fmt: Scalars['String'];
 };
 
 export type Spark = {
   __typename?: 'Spark';
-  symbol?: Maybe<Scalars['String']>;
-  end?: Maybe<Scalars['Int']>;
-  start?: Maybe<Scalars['Int']>;
-  previousClose?: Maybe<Scalars['Float']>;
-  chartPreviousClose?: Maybe<Scalars['Float']>;
-  dataGranularity?: Maybe<Scalars['Int']>;
-  close?: Maybe<Array<Maybe<Scalars['Float']>>>;
-  timestamp?: Maybe<Array<Maybe<Scalars['Int']>>>;
+  symbol: Scalars['String'];
+  end: Scalars['Int'];
+  start: Scalars['Int'];
+  previousClose: Scalars['Float'];
+  chartPreviousClose: Scalars['Float'];
+  dataGranularity: Scalars['Int'];
+  close: Array<Maybe<Scalars['Float']>>;
+  timestamp: Array<Maybe<Scalars['Int']>>;
 };
 
 export type RegularMarketTime = {
   __typename?: 'RegularMarketTime';
-  raw?: Maybe<Scalars['Int']>;
-  fmt?: Maybe<Scalars['String']>;
+  raw: Scalars['Int'];
+  fmt: Scalars['String'];
 };
 
 export type SummaryAndSparkResult = {
   __typename?: 'SummaryAndSparkResult';
-  exchangeTimezoneName?: Maybe<Scalars['String']>;
-  fullExchangeName?: Maybe<Scalars['String']>;
-  symbol?: Maybe<Scalars['String']>;
-  gmtOffSetMilliseconds?: Maybe<Scalars['Int']>;
+  exchangeTimezoneName: Scalars['String'];
+  fullExchangeName: Scalars['String'];
+  symbol: Scalars['String'];
+  gmtOffSetMilliseconds: Scalars['Int'];
   firstTradeDateMilliseconds?: Maybe<Scalars['Int']>;
-  exchangeDataDelayedBy?: Maybe<Scalars['Int']>;
-  language?: Maybe<Scalars['String']>;
-  exchangeTimezoneShortName?: Maybe<Scalars['String']>;
-  quoteType?: Maybe<Scalars['String']>;
-  marketState?: Maybe<Scalars['String']>;
-  market?: Maybe<Scalars['String']>;
-  priceHint?: Maybe<Scalars['Int']>;
-  tradeable?: Maybe<Scalars['Boolean']>;
-  exchange?: Maybe<Scalars['String']>;
-  sourceInterval?: Maybe<Scalars['Int']>;
+  exchangeDataDelayedBy: Scalars['Int'];
+  language: Scalars['String'];
+  exchangeTimezoneShortName: Scalars['String'];
+  quoteType: Scalars['String'];
+  marketState: Scalars['String'];
+  market: Scalars['String'];
+  priceHint: Scalars['Int'];
+  tradeable: Scalars['Boolean'];
+  exchange: Scalars['String'];
+  sourceInterval: Scalars['Int'];
   shortName?: Maybe<Scalars['String']>;
-  region?: Maybe<Scalars['String']>;
-  triggerable?: Maybe<Scalars['Boolean']>;
-  regularMarketPreviousClose?: Maybe<RegularMarketPreviousClose>;
-  spark?: Maybe<Spark>;
-  regularMarketTime?: Maybe<RegularMarketTime>;
+  region: Scalars['String'];
+  triggerable: Scalars['Boolean'];
+  regularMarketPreviousClose: RegularMarketPreviousClose;
+  spark: Spark;
+  regularMarketTime: RegularMarketTime;
 };
 
 export type MarketSummaryAndSparkResponse = {
@@ -140,18 +140,19 @@ export enum Region {
 
 export type Movers = {
   __typename?: 'Movers';
-  finance?: Maybe<Finance>;
+  finance: Finance;
 };
 
 export type SummaryAndSpark = {
   __typename?: 'SummaryAndSpark';
-  marketSummaryAndSparkResponse?: Maybe<MarketSummaryAndSparkResponse>;
+  marketSummaryAndSparkResponse: MarketSummaryAndSparkResponse;
 };
 
 export type Query = {
   __typename?: 'Query';
-  summaryAndSpark?: Maybe<SummaryAndSpark>;
-  movers?: Maybe<Movers>;
+  summaryAndSpark: SummaryAndSpark;
+  movers: Movers;
+  allMovers: Array<Maybe<Movers>>;
 };
 
 
@@ -164,6 +165,34 @@ export type QueryMoversArgs = {
   region: Region;
 };
 
+
+export type QueryAllMoversArgs = {
+  regions: Array<Maybe<Region>>;
+};
+
+export type GetAllMoversQueryVariables = Exact<{
+  regions: Array<Maybe<Region>> | Maybe<Region>;
+}>;
+
+
+export type GetAllMoversQuery = (
+  { __typename?: 'Query' }
+  & { allMovers: Array<Maybe<(
+    { __typename?: 'Movers' }
+    & { finance: (
+      { __typename?: 'Finance' }
+      & { result: Array<Maybe<(
+        { __typename?: 'MoversResult' }
+        & Pick<MoversResult, 'id' | 'title' | 'description'>
+        & { quotes: Array<Maybe<(
+          { __typename?: 'Quotes' }
+          & Pick<Quotes, 'symbol' | 'market' | 'marketState' | 'tradeable' | 'exchange' | 'quoteType'>
+        )>> }
+      )>> }
+    ) }
+  )>> }
+);
+
 export type GetMoversQueryVariables = Exact<{
   region: Region;
 }>;
@@ -171,20 +200,20 @@ export type GetMoversQueryVariables = Exact<{
 
 export type GetMoversQuery = (
   { __typename?: 'Query' }
-  & { movers?: Maybe<(
+  & { movers: (
     { __typename?: 'Movers' }
-    & { finance?: Maybe<(
+    & { finance: (
       { __typename?: 'Finance' }
-      & { result?: Maybe<Array<Maybe<(
+      & { result: Array<Maybe<(
         { __typename?: 'MoversResult' }
         & Pick<MoversResult, 'id' | 'title' | 'description'>
-        & { quotes?: Maybe<Array<Maybe<(
+        & { quotes: Array<Maybe<(
           { __typename?: 'Quotes' }
           & Pick<Quotes, 'symbol' | 'market' | 'marketState'>
-        )>>> }
-      )>>> }
-    )> }
-  )> }
+        )>> }
+      )>> }
+    ) }
+  ) }
 );
 
 export type GetSummaryAndSparkQueryVariables = Exact<{
@@ -194,19 +223,66 @@ export type GetSummaryAndSparkQueryVariables = Exact<{
 
 export type GetSummaryAndSparkQuery = (
   { __typename?: 'Query' }
-  & { summaryAndSpark?: Maybe<(
+  & { summaryAndSpark: (
     { __typename?: 'SummaryAndSpark' }
-    & { marketSummaryAndSparkResponse?: Maybe<(
+    & { marketSummaryAndSparkResponse: (
       { __typename?: 'MarketSummaryAndSparkResponse' }
       & { result?: Maybe<Array<Maybe<(
         { __typename?: 'SummaryAndSparkResult' }
         & Pick<SummaryAndSparkResult, 'symbol'>
       )>>> }
-    )> }
-  )> }
+    ) }
+  ) }
 );
 
 
+export const GetAllMoversDocument = gql`
+    query GetAllMovers($regions: [Region]!) {
+  allMovers(regions: $regions) {
+    finance {
+      result {
+        id
+        title
+        description
+        quotes {
+          symbol
+          market
+          marketState
+          tradeable
+          exchange
+          quoteType
+        }
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetAllMoversQuery__
+ *
+ * To run a query within a React component, call `useGetAllMoversQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetAllMoversQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetAllMoversQuery({
+ *   variables: {
+ *      regions: // value for 'regions'
+ *   },
+ * });
+ */
+export function useGetAllMoversQuery(baseOptions: Apollo.QueryHookOptions<GetAllMoversQuery, GetAllMoversQueryVariables>) {
+        return Apollo.useQuery<GetAllMoversQuery, GetAllMoversQueryVariables>(GetAllMoversDocument, baseOptions);
+      }
+export function useGetAllMoversLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetAllMoversQuery, GetAllMoversQueryVariables>) {
+          return Apollo.useLazyQuery<GetAllMoversQuery, GetAllMoversQueryVariables>(GetAllMoversDocument, baseOptions);
+        }
+export type GetAllMoversQueryHookResult = ReturnType<typeof useGetAllMoversQuery>;
+export type GetAllMoversLazyQueryHookResult = ReturnType<typeof useGetAllMoversLazyQuery>;
+export type GetAllMoversQueryResult = Apollo.QueryResult<GetAllMoversQuery, GetAllMoversQueryVariables>;
 export const GetMoversDocument = gql`
     query GetMovers($region: Region!) {
   movers(region: $region) {

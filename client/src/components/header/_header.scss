@@ -1,0 +1,19 @@
+@import '../../assets/styles/base/variables';
+@import '../../assets/styles/layout/media-queries';
+
+.h1__title {
+  font-family: 'ralewayBlack', 'Roboto', 'Helvetica Neue';
+  font-size: 1.7em;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: .1em solid $rustedRed;
+  margin: 0;
+
+  @include media-queries(xs) {
+    font-size: 2.4em;
+  }
+
+  @include media-queries(sm) {
+    font-size: 3em;
+  }
+}

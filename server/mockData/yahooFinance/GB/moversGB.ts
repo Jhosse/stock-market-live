@@ -4,62 +4,53 @@ export const mockMoversGB: Movers = {
   finance: {
     result: [
       {
-        id: "ec5bebb9-b7b2-4474-9e5c-3e258b61cbe6", title: "Day Gainers - US", description: "Stocks ordered in descending order by price percent change greater than 3% with respect to the previous close", canonicalName: "DAY_GAINERS", criteriaMeta: {
+        id: "97b9075b-c5ab-4c85-bfd3-9694a061e5d2", title: "Day Gainers - United Kingdom", description: "Stocks ordered in descending order by price percent change greater than 2.5% with respect to the previous close for United Kingdom", canonicalName: "DAY_GAINERS_GB", criteriaMeta: {
           size: 6, offset: 0, sortField: "percentchange", sortType: "DESC", quoteType: "EQUITY", topOperator: "AND", criteria: [
             {
               field: "percentchange", operators: [
                 "GT"
               ], values: [
-                3
+                2.5
               ], labelsSelected: []
             },
             {
               field: "region", operators: [
                 "EQ"
               ], values: [], labelsSelected: [
-                53
-              ]
-            },
-            {
-              field: "intradaymarketcap", operators: [
-                "EQ"
-              ], values: [], labelsSelected: [
-                1,
-                2,
-                3
+                17
               ]
             },
             {
               field: "dayvolume", operators: [
                 "GT"
               ], values: [
-                15000
+                100000
               ], labelsSelected: []
             }
           ]
-        }, rawCriteria: "{\"offset\":0,\"size\":6,\"sortField\":\"percentchange\",\"sortType\":\"DESC\",\"quoteType\":\"EQUITY\",\"query\":{\"operator\":\"AND\",\"operands\":[{\"operator\":\"GT\",\"operands\":[\"percentchange\",3.0]},{\"operator\":\"eq\",\"operands\":[\"region\",\"us\"]},{\"operator\":\"or\",\"operands\":[{\"operator\":\"BTWN\",\"operands\":[\"intradaymarketcap\",2000000000,10000000000]},{\"operator\":\"BTWN\",\"operands\":[\"intradaymarketcap\",10000000000,100000000000]},{\"operator\":\"GT\",\"operands\":[\"intradaymarketcap\",100000000000]}]},{\"operator\":\"gt\",\"operands\":[\"dayvolume\",15000]}]}}", start: 0, count: 6, total: 372, quotes: [
+        }, rawCriteria: "{\"offset\":0,\"size\":6,\"sortField\":\"percentchange\",\"sortType\":\"desc\",\"quoteType\":\"equity\",\"query\":{\"operator\":\"and\",\"operands\":[{\"operator\":\"gt\",\"operands\":[\"percentchange\",2.5]},{\"operator\":\"eq\",\"operands\":[\"region\",\"gb\"]},{\"operator\":\"gt\",\"operands\":[\"dayvolume\",100000]}]}}", start: 0, count: 6, total: 82, quotes: [
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1013610600000, priceHint: 2, exchange: "NYQ", market: "us_market", fullExchangeName: "NYSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "GME"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1496214000000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "0E6H.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1609857000000, priceHint: 2, exchange: "PNK", market: "us_market", fullExchangeName: "Other OTC", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "APTPF"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1519286400000, exchange: "IOB", market: "gb_market", fullExchangeName: "IOB", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "0YZ2.IL"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1609857000000, priceHint: 2, exchange: "PNK", market: "us_market", fullExchangeName: "Other OTC", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "NWITY"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "0LCZ.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1201703400000, priceHint: 2, exchange: "PNK", market: "us_market", fullExchangeName: "Other OTC", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "JSHLY"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 962607600000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "7DIG.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1201703400000, priceHint: 2, exchange: "PNK", market: "us_market", fullExchangeName: "Other OTC", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "JMHLY"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1153292400000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "ARDN.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1164119400000, priceHint: 2, exchange: "NYQ", market: "us_market", fullExchangeName: "NYSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "AER"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1224486000000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "EQT.L"
           }
-        ], predefinedScr: true, versionId: 6
+        ], predefinedScr: true, versionId: 1
       },
       {
-        id: "8ecefa87-a8b0-434a-9b39-e061a0baef9b", title: "Day Losers - US", description: "Stocks ordered in ascending order by price percent change with respect to the previous close", canonicalName: "DAY_LOSERS", criteriaMeta: {
+        id: "01a3b7ec-c577-401f-8b19-57d6bbf5ce8e", title: "Day Losers - United Kingdom", description: "Stocks ordered in ascending order by price percent change with respect to the previous close for United Kingdom", canonicalName: "DAY_LOSERS_GB", criteriaMeta: {
           size: 6, offset: 0, sortField: "percentchange", sortType: "ASC", quoteType: "EQUITY", topOperator: "AND", criteria: [
             {
               field: "percentchange", operators: [
@@ -72,95 +63,77 @@ export const mockMoversGB: Movers = {
               field: "region", operators: [
                 "EQ"
               ], values: [], labelsSelected: [
-                53
-              ]
-            },
-            {
-              field: "intradaymarketcap", operators: [
-                "EQ"
-              ], values: [], labelsSelected: [
-                1,
-                2,
-                3
+                17
               ]
             },
             {
               field: "dayvolume", operators: [
                 "GT"
               ], values: [
-                20000
+                100000
               ], labelsSelected: []
             }
           ]
-        }, rawCriteria: "{\"offset\":0,\"size\":6,\"sortField\":\"percentchange\",\"sortType\":\"ASC\",\"quoteType\":\"EQUITY\",\"query\":{\"operator\":\"AND\",\"operands\":[{\"operator\":\"LT\",\"operands\":[\"percentchange\",-2.5]},{\"operator\":\"eq\",\"operands\":[\"region\",\"us\"]},{\"operator\":\"or\",\"operands\":[{\"operator\":\"BTWN\",\"operands\":[\"intradaymarketcap\",2000000000,10000000000]},{\"operator\":\"BTWN\",\"operands\":[\"intradaymarketcap\",10000000000,100000000000]},{\"operator\":\"GT\",\"operands\":[\"intradaymarketcap\",100000000000]}]},{\"operator\":\"gt\",\"operands\":[\"dayvolume\",20000]}]}}", start: 0, count: 6, total: 449, quotes: [
+        }, rawCriteria: "{\"offset\":0,\"size\":6,\"sortField\":\"percentchange\",\"sortType\":\"asc\",\"quoteType\":\"equity\",\"query\":{\"operator\":\"and\",\"operands\":[{\"operator\":\"lt\",\"operands\":[\"percentchange\",-2.5]},{\"operator\":\"eq\",\"operands\":[\"region\",\"gb\"]},{\"operator\":\"gt\",\"operands\":[\"dayvolume\",100000]}]}}", start: 0, count: 6, total: 57, quotes: [
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1337088600000, priceHint: 2, exchange: "PNK", market: "us_market", fullExchangeName: "Other OTC", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "GCPEF"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1614844800000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "UHS.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1214314200000, priceHint: 2, exchange: "PNK", market: "us_market", fullExchangeName: "Other OTC", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "DLPTF"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "0RA9.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1609857000000, priceHint: 2, exchange: "PNK", market: "us_market", fullExchangeName: "Other OTC", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "GNENF"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1136361600000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "ORR.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1522243800000, priceHint: 2, exchange: "NMS", market: "us_market", fullExchangeName: "NasdaqGS", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "BILI"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1254380400000, exchange: "IOB", market: "gb_market", fullExchangeName: "IOB", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "0RUK.IL"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1610116200000, priceHint: 2, exchange: "PNK", market: "us_market", fullExchangeName: "Other OTC", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "CRWOF"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 955090800000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "CLP.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1287581400000, priceHint: 2, exchange: "NYQ", market: "us_market", fullExchangeName: "NYSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "TAL"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1502953200000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "MACP.L"
           }
-        ], predefinedScr: true, versionId: 4
+        ], predefinedScr: true, versionId: 1
       },
       {
-        id: "437465ef-980e-4d8c-a860-de7cbfbab373", title: "Most Actives - US", description: "Stocks ordered in descending order by intraday trade volume", canonicalName: "MOST_ACTIVES", criteriaMeta: {
+        id: "433c5af8-f58f-4d92-8338-7d928f558a0d", title: "Most Actives - United Kingdom", description: "Stocks ordered in descending order by intraday trade volume for United Kingdom", canonicalName: "MOST_ACTIVES_GB", criteriaMeta: {
           size: 6, offset: 0, sortField: "dayvolume", sortType: "DESC", quoteType: "EQUITY", topOperator: "AND", criteria: [
             {
               field: "region", operators: [
                 "EQ"
               ], values: [], labelsSelected: [
-                53
-              ]
-            },
-            {
-              field: "intradaymarketcap", operators: [
-                "EQ"
-              ], values: [], labelsSelected: [
-                1,
-                2,
-                3
+                17
               ]
             },
             {
               field: "dayvolume", operators: [
                 "GT"
               ], values: [
-                5000000
+                100000
               ], labelsSelected: []
             }
           ]
-        }, rawCriteria: "{\"offset\":0,\"size\":6,\"sortField\":\"dayvolume\",\"sortType\":\"DESC\",\"quoteType\":\"EQUITY\",\"query\":{\"operator\":\"AND\",\"operands\":[{\"operator\":\"eq\",\"operands\":[\"region\",\"us\"]},{\"operator\":\"or\",\"operands\":[{\"operator\":\"BTWN\",\"operands\":[\"intradaymarketcap\",2000000000,10000000000]},{\"operator\":\"BTWN\",\"operands\":[\"intradaymarketcap\",10000000000,100000000000]},{\"operator\":\"GT\",\"operands\":[\"intradaymarketcap\",100000000000]}]},{\"operator\":\"gt\",\"operands\":[\"dayvolume\",5000000]}]}}", start: 0, count: 6, total: 204, quotes: [
+        }, rawCriteria: "{\"offset\":0,\"size\":6,\"sortField\":\"dayvolume\",\"sortType\":\"desc\",\"quoteType\":\"equity\",\"query\":{\"operator\":\"and\",\"operands\":[{\"operator\":\"eq\",\"operands\":[\"region\",\"gb\"]},{\"operator\":\"gt\",\"operands\":[\"dayvolume\",100000]}]}}", start: 0, count: 6, total: 475, quotes: [
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1536759000000, priceHint: 2, exchange: "NYQ", market: "us_market", fullExchangeName: "NYSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "NIO"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1355126400000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "PREM.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: -252322200000, priceHint: 2, exchange: "NYQ", market: "us_market", fullExchangeName: "NYSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "GE"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1584950400000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "SYME.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 345479400000, priceHint: 2, exchange: "NMS", market: "us_market", fullExchangeName: "NasdaqGS", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "AAPL"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1136361600000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "ORR.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1387377000000, priceHint: 2, exchange: "NYQ", market: "us_market", fullExchangeName: "NYSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "AMC"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1469602800000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "ICON.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 1601472600000, priceHint: 2, exchange: "NYQ", market: "us_market", fullExchangeName: "NYSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "PLTR"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1292832000000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "CAT.L"
           },
           {
-            language: "US", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, firstTradeDateMilliseconds: 76253400000, priceHint: 2, exchange: "NYQ", market: "us_market", fullExchangeName: "NYSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 0, exchangeTimezoneName: "America/New_York", exchangeTimezoneShortName: "EST", gmtOffSetMilliseconds: -18000000, esgPopulated: false, tradeable: true, symbol: "F"
+            language: "GB", region: "EN-US", quoteType: "EQUITY", quoteSourceName: "Delayed Quote", triggerable: false, priceHint: 2, firstTradeDateMilliseconds: 1224486000000, exchange: "LSE", market: "gb_market", fullExchangeName: "LSE", marketState: "REGULAR", sourceInterval: 15, exchangeDataDelayedBy: 20, exchangeTimezoneName: "Europe/London", exchangeTimezoneShortName: "GMT", gmtOffSetMilliseconds: 0, esgPopulated: false, tradeable: false, symbol: "EQT.L"
           }
-        ], predefinedScr: true, versionId: 6
+        ], predefinedScr: true, versionId: 1
       }
-    ], error: null
+    ], error: undefined
   }
 }

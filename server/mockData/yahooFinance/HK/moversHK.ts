@@ -1,4 +1,3 @@
-
 import { Movers } from "../../../types/graphql";
 
 export const mockMoversHK: Movers = {
@@ -114,6 +113,6 @@ export const mockMoversHK: Movers = {
           }
         ], predefinedScr: true, versionId: 0
       }
-    ], error: null
+    ], error: undefined
   }
 }

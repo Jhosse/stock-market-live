@@ -1,0 +1,67 @@
+@import '../../../assets/styles/base/variables';
+@import '../../../assets/styles/layout/media-queries';
+
+.dashboardTable {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 850px;
+  padding-bottom: 1em;
+
+  @include media-queries(sm) {
+    padding-bottom: 2em;
+  }
+}
+
+.dashboardTable__table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr:nth-of-type(even) {
+    background-color: $khaki;
+  }
+}
+
+.dashboardTable__title {
+  margin-bottom: 0;
+}
+
+.dashboardTable__cell {
+  &--header {
+    text-transform: capitalize;
+    background-color: $black;
+    color: $white;
+    display: none;
+    padding: .5em .3em;
+    text-align: left;
+
+    @include media-queries(sm) {
+      display: table-cell;
+    }
+  }
+
+  &--content {
+    display: block;
+    border-bottom: 1px solid $softGrey;
+    position: relative;
+    padding: .5em 0 .5em 50%;
+
+    @include media-queries(sm) {
+      display: table-cell;
+      padding: .5em .3em;
+      text-align: left;
+      border: none;
+    }
+
+    &::before {
+      content: attr(data-attribute);
+      position: absolute;
+      left: .3em;
+      white-space: nowrap;
+      color: $black;
+
+      @include media-queries(sm) {
+        display: none;
+      }
+    }
+  }
+}

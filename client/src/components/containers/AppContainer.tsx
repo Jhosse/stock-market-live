@@ -5,6 +5,9 @@ interface AppContainerChildren {
 }
 
 const containerStyles = {
+  with: '100%',
+  maxWidth: '1200px',
+  margin: '0 auto',
   padding: '1em 0'
 }
 
@@ -12,7 +15,7 @@ export const AppContainer: FunctionComponent<AppContainerChildren> = ({
   children
 }) => {
   return (
-    <div style={containerStyles}>
+    <div className="App" style={containerStyles}>
       {children}
     </div>
   )

@@ -12,8 +12,8 @@ export const PageItemContainer: FunctionComponent<PageItemContainerChildren> = (
   children
 }) => {
   return (
-    <div style={containerStyles}>
+    <article style={containerStyles}>
       {children}
-    </div>
+    </article>
   )
 }

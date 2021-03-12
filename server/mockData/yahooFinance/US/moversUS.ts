@@ -161,6 +161,6 @@ export const mockMoversUS: Movers = {
           }
         ], predefinedScr: true, versionId: 6
       }
-    ], error: null
+    ], error: undefined
   }
 }

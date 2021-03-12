@@ -4676,6 +4676,6 @@ export const mockSummaryAndSparkUS: SummaryAndSpark = {
           raw: 28930.11, fmt: "28,930.11"
         }
       }
-    ], error: null
+    ], error: undefined
   }
 }

@@ -4306,6 +4306,6 @@ export const mockSummaryAndSparkGB: SummaryAndSpark = {
           raw: 5830.65, fmt: "5,830.65"
         }, triggerable: false
       }
-    ], error: null
+    ], error: undefined
   }
 }

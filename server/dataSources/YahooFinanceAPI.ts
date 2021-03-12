@@ -34,5 +34,18 @@ export class YahooFinanceAPI extends RESTDataSource {
   async getMovers(region: Region): Promise<Movers> {
     return this.get(`get-movers?region=${region}`)
   }
+
+  /**
+ * The live day gainers / losers / actives in an array of regions
+ * @param regions [US,GB,HK]
+ * @returns Promise<Movers[]>
+ */
+  async getAllMovers(regions: Region[]): Promise<Movers[]> {
+    return await Promise.all(
+      regions.map(region => {
+        return this.get(`get-movers?region=${region}`)
+      })
+    )
+  }
 }
 
