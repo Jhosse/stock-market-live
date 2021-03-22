@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client'
 import { getAllMovers } from '../../graphql/queries'
 import { Region, Quotes, Movers, MoversResult } from '../../graphql/graphql'
 import { DashboardTable } from './dashboardTable/DashboardTable'
-import { isRegexMatch } from '../../utils/strings'
+import { isRegexMatch, updateMapKeyArrayPair } from '../../utils'
 
 export enum Titles {
   GAINERS = 'Day Gainers',
@@ -13,11 +13,11 @@ export enum Titles {
 }
 
 export const Dashboard = () => {
-  const initialMap: Map<Titles, Quotes[]> = new Map()
-  const [quotes, setQuote] = useState<Map<Titles, Quotes[]>>(initialMap)
+  const quotesMap: Map<Titles, Quotes[]> = new Map()
+  const [quotes, setQuote] = useState<Map<Titles, Quotes[]>>(new Map())
 
   // <GetAllMoversQuery, GetAllMoversQueryVariables>
-  const { data, loading } = useQuery(getAllMovers, {
+  const { loading, data } = useQuery(getAllMovers, {
     variables: {
       regions: [Region.Us, Region.Gb, Region.Hk]
     }
@@ -27,19 +27,15 @@ export const Dashboard = () => {
     if (data) {
       data.allMovers.map((region: Movers) => {
         return region.finance.result.map((moverResult: MoversResult) => {
-          if (isRegexMatch(Titles.GAINERS, moverResult.title)) {
-            if (!initialMap.has(Titles.GAINERS)) initialMap.set(Titles.GAINERS, [])
-            initialMap.get(Titles.GAINERS)?.push(...moverResult.quotes)
-            setQuote(initialMap)
-          }
-          else if (isRegexMatch(Titles.LOSERS, moverResult.title)) {
-            if (!initialMap.has(Titles.LOSERS)) initialMap.set(Titles.LOSERS, [])
-            initialMap.get(Titles.LOSERS)?.push(...moverResult.quotes)
-            setQuote(initialMap)
-          } else if (isRegexMatch(Titles.ACTIVES, moverResult.title)) {
-            if (!initialMap.has(Titles.ACTIVES)) initialMap.set(Titles.ACTIVES, [])
-            initialMap.get(Titles.ACTIVES)?.push(...moverResult.quotes)
-            setQuote(initialMap)
+          switch (true) {
+            case isRegexMatch(Titles.GAINERS, moverResult.title):
+              return setQuote(updateMapKeyArrayPair(Titles.GAINERS, moverResult.quotes, quotesMap))
+            case isRegexMatch(Titles.LOSERS, moverResult.title):
+              return setQuote(updateMapKeyArrayPair(Titles.LOSERS, moverResult.quotes, quotesMap))
+            case isRegexMatch(Titles.ACTIVES, moverResult.title):
+              return setQuote(updateMapKeyArrayPair(Titles.ACTIVES, moverResult.quotes, quotesMap))
+            default:
+              return undefined
           }
         })
       })

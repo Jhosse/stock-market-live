@@ -1,8 +1,18 @@
 import { IResolvers } from 'graphql-tools'
-import { isDev } from '../env'
-import { SummaryAndSpark, Movers } from '../types/graphql'
+import bcrypt from 'bcrypt'
+import jwt from 'jsonwebtoken'
+import { isDev, privateKey } from '../env'
+import { SummaryAndSpark, Movers, AuthPayload } from '../types/graphql'
 import { Region } from '../types/customTypes'
-import { mockSummaryAndSparkUS, mockMoversUS, mockSummaryAndSparkGB, mockMoversGB, mockSummaryAndSparkHK, mockMoversHK } from '../mockData/yahooFinance/index'
+import {
+  mockSummaryAndSparkUS,
+  mockMoversUS,
+  mockSummaryAndSparkGB,
+  mockMoversGB,
+  mockSummaryAndSparkHK,
+  mockMoversHK,
+  mockDBUser
+} from '../mockData/index'
 
 enum mockDataType {
   MOVER,
@@ -43,6 +53,29 @@ const resolvers: IResolvers = {
         return [mockMoversUS, mockMoversGB, mockMoversHK]
       }
       return await dataSources.yahooFinanceAPI.getAllMovers(regions)
+    }
+  },
+
+  Mutation: {
+    login: async (_source, { email, password }): Promise<AuthPayload> => {
+      // TODO: Refactor when DB is implemented
+      const emptyUser = {
+        token: '',
+        user: {
+          id: '',
+          username: '',
+          email: ''
+        }
+      }
+
+      // TODO: Handle this properly
+      if (email !== mockDBUser.email) return emptyUser // throw Error('User doesn\'t exist')
+
+      const validPassword = await bcrypt.compare(password, mockDBUser.password)
+      // TODO: Handle this properly
+      if (!validPassword) return emptyUser // throw Error('Password doesn\'t match')
+      const token = await jwt.sign({ id: mockDBUser.id, username: mockDBUser.username, email }, privateKey, { algorithm: 'RS256' })
+      return { token: `Bearer ${token}`, user: mockDBUser }
     }
   }
 }

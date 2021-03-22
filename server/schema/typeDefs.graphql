@@ -126,3 +126,18 @@ type Query {
   movers(region: Region!): Movers!
   allMovers(regions: [Region]!): [Movers]!
 }
+
+type User {
+  id: String!
+  username: String!
+  email: String!
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+}
+
+type Mutation {
+  login(email: String!, password: String!): AuthPayload
+}

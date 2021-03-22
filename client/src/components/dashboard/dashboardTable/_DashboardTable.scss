@@ -1,5 +1,6 @@
 @import '../../../assets/styles/base/variables';
 @import '../../../assets/styles/layout/media-queries';
+@import '../../../assets/styles/base/typography';
 
 .dashboardTable {
   width: 100%;
@@ -33,9 +34,49 @@
     display: none;
     padding: .5em .3em;
     text-align: left;
+    font-family: 'ralewayBold';
 
     @include media-queries(sm) {
       display: table-cell;
+    }
+  }
+
+  &--symbol a {
+    color: $black;
+    font-family: 'ralewayBold';
+    text-decoration: none;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 0px;
+      height: 2px;
+      transition: all 0.1s ease-in-out;
+      transition-duration: 0.2s;
+      opacity: 0;
+      background-color: $black
+    }
+
+    &::after {
+      right: calc(50%);
+    }
+
+    &::before {
+      left: calc(50%);
+    }
+
+    &:hover {
+      &::before {
+        width: 50%;
+        opacity: 1;
+      }
+      &::after {
+        width: 50%;
+        opacity: 1
+      }
     }
   }
 
@@ -58,6 +99,7 @@
       left: .3em;
       white-space: nowrap;
       color: $black;
+      font-family: 'ralewayBold';
 
       @include media-queries(sm) {
         display: none;

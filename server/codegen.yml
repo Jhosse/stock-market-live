@@ -7,3 +7,5 @@ generates:
       - typescript-resolvers
     config:
       maybeValue: T
+      mappers:
+        AuthenticatedUser: ./customTypes#AuthenticatedUser

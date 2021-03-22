@@ -170,6 +170,30 @@ export type QueryAllMoversArgs = {
   regions: Array<Maybe<Region>>;
 };
 
+export type User = {
+  __typename?: 'User';
+  id: Scalars['String'];
+  username: Scalars['String'];
+  email: Scalars['String'];
+};
+
+export type AuthPayload = {
+  __typename?: 'AuthPayload';
+  token: Scalars['String'];
+  user: User;
+};
+
+export type Mutation = {
+  __typename?: 'Mutation';
+  login?: Maybe<AuthPayload>;
+};
+
+
+export type MutationLoginArgs = {
+  email: Scalars['String'];
+  password: Scalars['String'];
+};
+
 export type GetAllMoversQueryVariables = Exact<{
   regions: Array<Maybe<Region>> | Maybe<Region>;
 }>;

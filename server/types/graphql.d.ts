@@ -1,4 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
+import { AuthenticatedUser } from './customTypes';
 export type Maybe<T> = T;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
@@ -170,6 +171,30 @@ export type QueryAllMoversArgs = {
   regions: Array<Maybe<Region>>;
 };
 
+export type User = {
+  __typename?: 'User';
+  id: Scalars['String'];
+  username: Scalars['String'];
+  email: Scalars['String'];
+};
+
+export type AuthPayload = {
+  __typename?: 'AuthPayload';
+  token: Scalars['String'];
+  user: User;
+};
+
+export type Mutation = {
+  __typename?: 'Mutation';
+  login?: Maybe<AuthPayload>;
+};
+
+
+export type MutationLoginArgs = {
+  email: Scalars['String'];
+  password: Scalars['String'];
+};
+
 
 
 export type ResolverTypeWrapper<T> = Promise<T> | T;
@@ -266,6 +291,9 @@ export type ResolversTypes = {
   Movers: ResolverTypeWrapper<Movers>;
   SummaryAndSpark: ResolverTypeWrapper<SummaryAndSpark>;
   Query: ResolverTypeWrapper<{}>;
+  User: ResolverTypeWrapper<User>;
+  AuthPayload: ResolverTypeWrapper<AuthPayload>;
+  Mutation: ResolverTypeWrapper<{}>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
@@ -287,6 +315,9 @@ export type ResolversParentTypes = {
   Movers: Movers;
   SummaryAndSpark: SummaryAndSpark;
   Query: {};
+  User: User;
+  AuthPayload: AuthPayload;
+  Mutation: {};
 };
 
 export type QuotesResolvers<ContextType = any, ParentType extends ResolversParentTypes['Quotes'] = ResolversParentTypes['Quotes']> = {
@@ -424,6 +455,23 @@ export type QueryResolvers<ContextType = any, ParentType extends ResolversParent
   allMovers?: Resolver<Array<Maybe<ResolversTypes['Movers']>>, ParentType, ContextType, RequireFields<QueryAllMoversArgs, 'regions'>>;
 };
 
+export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
+  id?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  username?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  email?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type AuthPayloadResolvers<ContextType = any, ParentType extends ResolversParentTypes['AuthPayload'] = ResolversParentTypes['AuthPayload']> = {
+  token?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  user?: Resolver<ResolversTypes['User'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
+export type MutationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
+  login?: Resolver<Maybe<ResolversTypes['AuthPayload']>, ParentType, ContextType, RequireFields<MutationLoginArgs, 'email' | 'password'>>;
+};
+
 export type Resolvers<ContextType = any> = {
   Quotes?: QuotesResolvers<ContextType>;
   Criteria?: CriteriaResolvers<ContextType>;
@@ -438,6 +486,9 @@ export type Resolvers<ContextType = any> = {
   Movers?: MoversResolvers<ContextType>;
   SummaryAndSpark?: SummaryAndSparkResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
+  User?: UserResolvers<ContextType>;
+  AuthPayload?: AuthPayloadResolvers<ContextType>;
+  Mutation?: MutationResolvers<ContextType>;
 };
 
 

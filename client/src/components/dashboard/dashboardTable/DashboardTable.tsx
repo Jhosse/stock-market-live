@@ -1,7 +1,9 @@
 import React, { FunctionComponent, ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 import { Row, Col } from 'react-flexbox-grid'
 import { Quotes } from '../../../graphql/graphql'
+import { removeSubString } from '../../../utils'
 import { Titles } from '../Dashboard'
 
 import './_DashboardTable.scss'
@@ -9,6 +11,8 @@ import './_DashboardTable.scss'
 const GAINERS_DESCRIPTION = "Stocks price percent change greater than ~3% with respect to the previous close"
 const LOSER_DESCRIPTION = "Stocks price percent change with respect to the previous close"
 const ACTIVE_DESCRIPTION = "Stocks intraday trade volume"
+
+const MARKET_SUBSTRING = '_market'
 
 interface DashboardTableProps {
   title: Titles
@@ -52,10 +56,29 @@ const populateTableBody = (quotes: Quotes[], tableHeaders: string[]): ReactNode 
   return quotes.map((quote: any) => {
     return (
       <tr key={uuidv4()}>
-        {tableHeaders.map((header: any) =>
-          <td className={'dashboardTable__cell--content'} key={uuidv4()} data-attribute={header}>
-            {quote[header].toString().toLowerCase()}
-          </td>
+        {tableHeaders.map((header: any, index: number) => {
+          if (index === 0) {
+            return (
+              <td
+                className={'dashboardTable__cell--content dashboardTable__cell--symbol'}
+                key={uuidv4()}
+                data-attribute={header}>
+                <Link to={`/symbol/${quote[header]}?region=us`} >
+                  {quote[header].toString().toLowerCase()}
+                </Link>
+              </td>
+            )
+          } else {
+            return (
+              <td
+                className={'dashboardTable__cell--content'}
+                key={uuidv4()}
+                data-attribute={header}>
+                {quote[header].toString().toLowerCase()}
+              </td>
+            )
+          }
+        }
         )}
       </tr>
     )
